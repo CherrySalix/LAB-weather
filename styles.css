@@ -140,3 +140,29 @@
 .hidden {
   display: none;
 }
+
+@media (max-width: 600px) {
+h1 {
+font-size: 36px;
+}
+
+
+.subtitle {
+font-size: 16px;
+}
+
+
+input[type="number"] {
+width: 80%;
+}
+
+
+button {
+width: 80%;
+}
+
+
+#weather-result {
+width: 90%;
+}
+}
