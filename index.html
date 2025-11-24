@@ -1,36 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>App de Clima</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<html lang="english">
+  <head>
+    <title>Mini app clima</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <main class="weather-container">
-        <h1>🌙 Mini visualizador de clima! ☀️</h1>
-        
-        <div class="input-group">
-            <label for="latitude-input">Latitud:</label>
-            <input type="number" id="latitude-input" placeholder="e.g. 19.43" value="25.666815" step="any">
+    <!-- fonts -->
+    <link rel="stylesheet" href="./styles.css" />
+    <link href="./index.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="desktop-container1">
+      <div class="desktop-desktop">
+        <video class="desktop-bg" autoplay muted loop playsinline poster="kangelfondo.jpg">
+            <source src="95864db21f32e953f290dad4bd57d69ffd4bd914.mp4" type="video/mp4">
+        </video>
+
+        <!-- header -->
+        <div class="desktop-navigation">
+          <div class="desktop-logo">
+            <img src="pchan.png" class="desktop-image1" />
+          </div>
+          <div class="desktop-cta">
+            <span class="desktop-text7">Made by: Enrique Berman</span>
+          </div>
         </div>
 
-        <div class="input-group">
-            <label for="longitude-input">Longitud:</label>
-            <input type="number" id="longitude-input" placeholder="e.g. -99.13" value="-100.28233" step="any">
+        <div class="desktop-hero-content">
+          
+          <span class="desktop-text1 PixelifySans">🌙 Mini app de clima! ☀️</span>
+          <span class="desktop-text2 Quicksand">
+            Mini proyecto para saber el clima según las coordenadas que se ingresen!
+          </span>
+          <span class="desktop-text3 InterRegular16px">
+            Like y suscribanse :3
+          </span>
+
+          <div class="desktop-inputs-wrapper">
+            <div class="desktop-input-field1">
+              <span class="desktop-text5 Quicksand">Ingresa la Latitud:</span>
+              <input type="number" placeholder="Ej: 25.666815" class="desktop-input1" id="latitude-input"/>
+            </div>
+
+            <div class="desktop-input-field2">
+              <span class="desktop-text6 Quicksand">Ingresa la Longitud:</span>
+              <input type="text" placeholder="Ej: -100.28233" class="desktop-input2" id="longitude-input"/>
+            </div>
+          </div>
+
+          <button class="desktop-button-primary-with-icon" onclick="handleFetchClick()">
+            <div class="desktop-frame11">
+              <span class="desktop-text4 Poppins">Checa el clima!</span>
+            </div>
+          </button>
+
+        <div id="weather-result" class="weather-box hidden">
+            <h2 class="weather-title">Resultados del clima</h2>
+            <p class="weather-item">
+            🌡 Temperatura actual: <span id="temp-display">--</span> °C
+            </p>
+            <p class="weather-item">
+            💨 Velocidad del viento: <span id="wind-display">--</span> km/h
+            </p>
+        </div>
         </div>
 
-        <button id="fetch-btn" class="btn-primary" onclick="handleFetchClick()">
-            Conoce el clima! 🌤️
-        </button>
-
-        <div id="weather-result" class="result-box hidden">
-            <p>🌡️ Temperatura: <span id="temp-display">--</span> °C</p>
-            <p>💨 Velocidad del viento: <span id="wind-display">--</span> km/h</p>
-        </div>
-    </main>
-
+      </div>
+    </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
